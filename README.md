@@ -37,7 +37,7 @@ Para começar a usar o **Guia Básico de Git**, basta seguir as seções e exemp
 1. **Configure seu nome e e-mail**:
 ```bash
 git config --global user.name "Seu Nome"
-git config --global user.email seu.email@email.com
+git config --global user.email "seu.email@email.com"
 ```
 2. **Verifique as configurações feitas**:
 ```bash
