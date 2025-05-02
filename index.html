@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Guia básico - Git</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="reset.css">
+</head>
+<body>
+  <main class="main">
+    <header class="header">
+      <h1>Guia básico - Git</h1>
+    </header>
+
+    <!-- Configurando um usuário -->
+    <section class="section bg-color--01" id="configuration">
+      <h2>Configurando um usuário</h2>
+      <p>Configure globalmente o email do usuário associado aos commits:</p>
+      <div class="section--box">
+        <p class="cod">git config --global user.name "Seu Nome"</p>
+      </div>
+      <p>Verifique todas as informações de configuração:</p>
+      <div class="section--box">
+        <p class="cod">git config --global user.email "seu.email@email.com"</p>
+      </div>
+      <p>Verificar todas as informações de configuração:</p>
+      <div class="section--box">
+        <p class="cod">git config --list</p>
+      </div>
+      <div class="section--box">
+        <p class="cod">git config --global -e</p>
+      </div>
+    </section>
+
+    <!-- Criando um repositório -->
+    <section class="section bg-color--02" id="init">
+      <h2>Criando um repositório</h2>
+      <p>Inicialize um novo repositório Git localmente no diretório atual:</p>
+      <div class="section--box">
+        <p class="cod">git init</p>
+      </div>
+      <p>Clone um repositório remoto já existente para o diretório local:</p>
+      <div class="section--box">
+        <p class="cod">git clone &lt;URL&gt;</p>
+      </div>
+      <p>Clone um repositório remoto usando um servidor remoto:</p>
+      <div class="section--box">
+        <p class="cod">git clone usuário@servidor: &lt;URL&gt;</p>
+      </div>
+    </section>
+
+    <!-- Adicionando e confirmando -->
+    <section class="section bg-color--03" id="configuration">
+      <h2>Adicionando & Confirmando</h2>
+      <p>Adicione todos os arquivos novos e/ou modificados ao <span>Staging</span> .</p>
+      <div class="section--box">
+        <p class="cod">git add .</p>
+      </div>
+      <p>Adicione um arquivo específico ao <span>Staging</span> .</p>
+      <div class="section--box">
+        <p class="cod">git add &lt;Nome do arquivo&gt;</p>
+      </div>
+      <p>Mova um arquivo do Staging para o <span>Repositório local</span>:</p>
+      <div class="section--box">
+        <p class="cod">git commit -m "comentários das alterações"</p>
+      </div>
+    </section>
+
+    <!-- Observando o repositório -->
+    <section class="section bg-color--01" id="init">
+      <h2>Observando seu repositório</h2>
+      <p>Exiba o estado atual do repositório, incluindo arquivos modificados, adicionados e confirmados:</p>
+      <div class="section--box">
+        <p class="cod">git status</p>
+      </div>
+      <p>Mostre as linhas exatas que foram adicionadas ou removidas:</p>
+      <div class="section--box">
+        <p class="cod">git diff</p>
+      </div>
+      <p>Exiba o histórico de <span>commits</span>.</p>
+      <div class="section--box">
+        <p class="cod">git log</p>
+      </div>
+      <p>Exiba cada commit em uma única linha, com apenas o hash do commit e a mensagem:</p>
+      <div class="section--box">
+        <p class="cod">git log --oneline</p>
+      </div>
+    </section>
+
+    <!-- Enviando alterações -->
+    <section class="section bg-color--02" id="init">
+      <h2>Enviando alterações</h2>
+      <p>Mova um arquivo do repositório local para o <span>repositório remoto</span>:</p>
+      <div class="section--box">
+        <p class="cod">git push</p>
+      </div>
+    </section>
+
+    <!-- Criando/Mudando/Excluindo uma Branch -->
+    <section class="section bg-color--03" id="init">
+      <h2>Criando/Mudando/Excluindo uma Branch</h2>
+      <p>Para criar uma nova branch em um repositório Git:</p>
+      <div class="section--box">
+        <p class="cod">git branch minha-nova-feature</p>
+      </div>
+      <p>Para entrar na nova branch:</p>
+      <div class="section--box">
+        <p class="cod">git checkout minha-nova-feature</p>
+      </div>
+      <p>Para retornar para a branch master/main:</p>
+      <div class="section--box">
+        <p class="cod">git checkout master</p>
+      </div>
+      <p>Para remover uma branch no Git:</p>
+      <div class="section--box">
+        <p class="cod">git branch -d minha-nova-feature</p>
+      </div>
+    </section>
+
+    <!-- Mesclando uma Branch em outra -->
+    <section class="section bg-color--01" id="init">
+      <h2>Mesclando uma Branch em outra</h2>
+      <p>Primeiro, mude para a branch de destino:</p>
+      <div class="section--box">
+        <p class="cod">git checkout main</p>
+      </div>
+      <p>Em seguida, mescle a branch "minha-nova-feature" na branch atual:</p>
+      <div class="section--box">
+        <p class="cod">git merge minha-nova-feature</p>
+      </div>
+      <p>Disponibilize uma branch para outros colaboradores em um repositório Git remoto:</p>
+      <div class="section--box">
+        <p class="cod">git push origin minha-nova-feature</p>
+      </div>
+    </section>
+
+    <!-- Atualizando -->
+    <section class="section bg-color--02" id="init">
+      <h2>Atualizando</h2>
+      <p>Obtenha as últimas atualizações de um repositório remoto:</p>
+      <div class="section--box">
+        <p class="cod">git pull</p>
+      </div>
+    </section>
+
+    <!-- Repositórios Remotos -->
+    <section class="section bg-color--03" id="remote">
+      <h2>Trabalhando com Repositórios Remotos</h2>
+      <p>Adicione um repositório remoto:</p>
+      <div class="section--box">
+        <p class="cod">git remote add origin &lt;URL&gt;</p>
+      </div>
+      <p>Verifique os repositórios remotos configurados:</p>
+      <div class="section--box">
+        <p class="cod">git remote -v</p>
+      </div>
+      <p>Remova um repositório remoto:</p>
+      <div class="section--box">
+        <p class="cod">git remote remove origin</p>
+      </div>
+    </section>
+
+    <!-- Stashing -->
+    <section class="section bg-color--01" id="stash">
+      <h2>Trabalhando com Stash</h2>
+      <p>Salve as mudanças no stash:</p>
+      <div class="section--box">
+        <p class="cod">git stash</p>
+      </div>
+      <p>Veja os stashes existentes:</p>
+      <div class="section--box">
+        <p class="cod">git stash list</p>
+      </div>
+      <p>Aplica o stash de volta:</p>
+      <div class="section--box">
+        <p class="cod">git stash apply</p>
+      </div>
+    </section>
+
+    <!-- Revertendo Commits -->
+    <section class="section bg-color--02" id="undo">
+      <h2>Revertendo Commits</h2>
+      <p>Para desfazer o último commit (mantendo as mudanças no diretório):</p>
+      <div class="section--box">
+        <p class="cod">git reset --soft HEAD~1</p>
+      </div>
+      <p>Para desfazer o último commit e as mudanças associadas:</p>
+      <div class="section--box">
+        <p class="cod">git reset --hard HEAD~1</p>
+      </div>
+    </section>
+
+    <!-- Git Log Avançado -->
+    <section class="section bg-color--03" id="log">
+      <h2>Git Log Avançado</h2>
+      <p>Exiba o histórico com gráfico de branches:</p>
+      <div class="section--box">
+        <p class="cod">git log --oneline --graph --decorate --all</p>
+      </div>
+      <p>Filtrar commits por autor:</p>
+      <div class="section--box">
+        <p class="cod">git log --author="Seu Nome"</p>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
